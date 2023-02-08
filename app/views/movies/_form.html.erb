@@ -1,0 +1,19 @@
+<%= form_with model: movie do |f| %>
+  <%= f.label :title %>
+  <p></p>
+  <%= f.text_field :title, size: "60x1" %>
+  <p></p>
+  <%= f.label :overview %>
+  <p></p>
+  <%= f.text_area :overview, size: "60x10" %>
+  <p></p>
+  <%= f.label :poster_url %>
+  <p></p>
+  <%= f.text_field :poster_url, size: "60x1" %>
+  <p></p>
+  <%= f.label :rating %>
+  <p></p>
+  <%= f.text_field :rating, size: "60x1" %>
+  <p></p>
+  <%= f.submit "Create Movie", class: "btn btn-primary" %>
+<% end %>

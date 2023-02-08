@@ -1,0 +1,15 @@
+<div class="container p-4">
+
+  <h1>Movies</h1>
+  <hr>
+  <ul class="articles list-inline">
+  <% @movies.each do |movie| %>
+  <li><h3><%= link_to movie.title, movie_path(movie), class: "text-decoration-none" %></h3></li>
+  <% end %>
+  </ul>
+
+<hr>
+
+  <%= link_to "Add new movie", new_movie_path %>
+
+</div>
