@@ -4,6 +4,11 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
+  def show
+    @list = List.find(params[:id])
+    @bookmark = Bookmark.new(list: @list)
+  end
+
   def new
     @list = List.new
   end
@@ -14,12 +19,11 @@ class ListsController < ApplicationController
     redirect_to list_path(@list)
   end
 
-  def show
+  def destroy
     @list = List.find(params[:id])
-    @bookmark = Bookmark.new
+    @list.destroy
+    redirect_to lists_path, status: :see_other
   end
-
-
 
   private
 
