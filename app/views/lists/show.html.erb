@@ -22,6 +22,7 @@
           <div class="card-body">
             <h5 class="card-title fw-bold"><%= movie.title %></h5>
             <p class="fw-bold text-secondary"><%= movie.rating %> ⭐️</p>
+            <hr>
             <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
             <p class="card-text"><%= bookmark.comment %></p>
           </div>
