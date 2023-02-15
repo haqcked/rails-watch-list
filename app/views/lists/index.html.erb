@@ -27,7 +27,7 @@
       <%= link_to list_path(list), class:"text-decoration-none" do %>
       <div class="card-category text-white p-3  shadow img-thumbnail" data-aos="zoom-in"
       style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-      url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_photo_test.jpg') %>)">
       <%= list.name %>
       </div>
       <% end %>
