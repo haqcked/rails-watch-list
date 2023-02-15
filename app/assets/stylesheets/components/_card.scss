@@ -1,3 +1,9 @@
-// .card-body {
-//   padding-bottom: 0%;
-// }
+.card-category {
+  height: 200px; /* adjust height to make the card taller */
+  font-size: 24px; /* adjust font size to make the text bigger */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
